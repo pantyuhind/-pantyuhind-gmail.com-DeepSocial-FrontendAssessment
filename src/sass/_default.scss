@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+
+html, body {
+  background: white;
+  font-size: 14px;
+}
+
+html, body, input, select, textarea {
+  font-family: 'PT Sans', sans-serif;
+  color: $color-dark;
+}
+
+.app {
+  padding: 61px 120px;
+  width: 680px;
+}
+
+.bold {
+  font-weight: 800;
+}
+
+.asterisk {
+  color: #F77148;
+}

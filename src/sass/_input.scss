@@ -1,0 +1,6 @@
+.input {
+  @extend %controls;
+  &::placeholder {
+    color: #999;
+  }
+}

@@ -1,0 +1,15 @@
+.field-control {
+
+  &_increase {
+
+    display: flex;
+    align-items: center;
+
+    .input {
+      width: 305px;
+      margin-right: 24px;
+    }
+
+  }
+
+}
