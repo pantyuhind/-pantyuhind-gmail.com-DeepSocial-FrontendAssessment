@@ -1,6 +1,5 @@
 .checkbox {
-  display: inline-flex;
-  vertical-align: middle;
+  display: block;
   align-items: center;
   position: relative;
   overflow: hidden;
@@ -20,8 +19,12 @@
 
   &__label {
     font-size: 14px;
-    margin-left: 11px;
+    padding: 3px 0 0 0;
+    position: relative;
+    left: 11px;
     line-height: 13px;
+    overflow: hidden;
+    display: block;
   }
 
   &__square {
@@ -29,6 +32,8 @@
     height: 16px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    display: block;
+    float: left;
   }
 
 }

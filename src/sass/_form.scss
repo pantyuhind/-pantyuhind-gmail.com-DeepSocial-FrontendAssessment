@@ -1,6 +1,9 @@
 .form {
 
   padding: 46px 0 0 0;
+  width: 680px;
+  display: inline-block;
+  vertical-align: top;
 
   &__row {
 
@@ -32,7 +35,7 @@
       padding: 0 20px 0 0;
     }
     &:last-child {
-      flex-grow: 1;
+      flex: 1 0;
     }
   }
 

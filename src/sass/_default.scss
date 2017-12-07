@@ -16,7 +16,13 @@ html, body, input, select, textarea {
 
 .app {
   padding: 61px 120px;
-  width: 680px;
+}
+
+.output {
+  display: inline-block;
+  vertical-align: top;
+  width: 400px;
+  font-size: 14px;
 }
 
 .bold {

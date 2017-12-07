@@ -1,5 +1,9 @@
 .field-control {
 
+  & + & {
+    margin-top: 19px;
+  }
+
   &_increase {
 
     display: flex;
