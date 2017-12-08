@@ -1,4 +1,4 @@
-import { cloneDeep, each, find, isEmpty } from 'lodash'
+import { cloneDeep, each, find, isEmpty, remove } from 'lodash'
 import { CHECKBOX_GROUP, INPUT, DROPDOWN } from './constants'
 import 'whatwg-fetch';
 
@@ -30,20 +30,14 @@ export function PrettyModel(model) {
     each(pModel, (row) => {
         let item = {};
         item.name = row.name;
-        if (row.fields) {
-            item.value = [];
-            each(row.fields, (field) => {
-                if (field.value) item.value.push(field.value)
-            });
-        } else if (row.options) {
-            if (row.choices) {
-                item.value = [];
-                each(row.options, (checkbox) => {
-                    if (checkbox.checked) item.value.push(checkbox.value)
-                });
-            } else {
-                item.value = findSelectedItem(row.options).value;
-            }
+         if (row.fields) {
+             item.value = remove(row.fields, x => !!x.value).map(x => x.value);
+             return;
+         }
+        if (row.choices) {
+            item.value = remove(row.options, x => x.checked).map(x => x.value);
+        } else {
+            item.value = findSelectedItem(row.options).value;
         }
         if (!isEmpty(item.value)) result.push(item);
     });

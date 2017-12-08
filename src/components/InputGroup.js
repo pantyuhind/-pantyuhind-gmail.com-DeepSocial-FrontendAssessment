@@ -26,7 +26,7 @@ export default class InputGroup extends Component {
 
         const data = this.props.data;
         const { sample, fields } = data;
-        console.log(sample);
+
         return (
             <div className="field-groups">
                 {
