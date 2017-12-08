@@ -1,5 +1,5 @@
 .checkbox {
-  display: block;
+  display: inline-block;
   align-items: center;
   position: relative;
   overflow: hidden;
@@ -22,7 +22,7 @@
     padding: 3px 0 0 11px;
     line-height: 13px;
     overflow: hidden;
-    display: inline-block;
+    display: block;
   }
 
   &__square {
